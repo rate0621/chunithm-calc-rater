@@ -8,24 +8,14 @@ with urllib.request.urlopen("https://chuniviewer.net/api/GetMusicConstantValues.
 
 
 df = pd.DataFrame(
-	index=[],
-	columns = ['name', 'rate']
+	columns = ['MUSICID', 'MUSICNAME', "difficulty_id", "level", 'BASERATE']
 )
 
 for music_info in ratelist_json:
-	series = pd.Series([music_info["music_id"], music_info["music_name"]], index=df.columns)
+	series = pd.Series([music_info["music_id"], music_info["music_name"], music_info["difficulty_id"], music_info["level"], music_info["value"]], index=df.columns)
 
 	df = df.append(
 		series, ignore_index = True
 	)
 
-
-#data_frame = pd.DataFrame(index=[], columns=['column1', 'column2'])
-#series = pd.Series(['hoge', 'fuga'], index=data_frame.columns)
-#
-#for i in range(5):
-#   data_frame = data_frame.append(series, ignore_index = True)
-#
-#data_frame.to_csv("aaa.csv", index=False)
-
-df.to_csv("employee.csv", index=False)
+df.to_csv("base_rate.csv", index=False)

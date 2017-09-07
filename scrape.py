@@ -3,6 +3,7 @@
 import codecs
 import re, pprint
 from bs4 import BeautifulSoup
+import sys
 
 def pp(obj):
   pp = pprint.PrettyPrinter(indent=4, width=160)
@@ -12,7 +13,10 @@ def pp(obj):
 html_file = ("/Users/uu071978/rate/rate/uni-scrape/html/chunithm.html")
 html = codecs.open(html_file, 'r', 'utf-8')
 soup = BeautifulSoup(html, "html.parser")
-article = soup.find(class_="box02 w420 mb_20")
-option = article.find_all("option")
+article = soup.find_all(class_="w388 musiclist_box bg_master")
 
-print (pp(option))
+for a in article:
+	print (a.find(class_="play_musicdata_highscore"))
+
+
+#print (pp(article))
