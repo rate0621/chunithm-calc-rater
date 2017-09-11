@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- 基本Head内容を読み込み -->
+<meta charset="UTF-8" />
+<meta name="viewport" id="viewport" content="width=480,user-scalable=yes" />
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8; IE=EmulateIE9" />
+<meta http-equiv="Pragma" CONTENT="no-cache">
+<meta http-equiv="Cache-Control" CONTENT="no-cache">
+<meta http-equiv="Expires" CONTENT="-1">
+<meta name="robots" content="INDEX, FOLLOW" />
+<meta name="auther" content="(C) SEGA">
+<meta name="copyright" content="&copy;SEGA">
+<meta name="description" content="【新音ゲー】 maimai チームが贈る、セガの新作音楽ゲーム「CHUNITHM（チュウニズム）」">
+<meta name="keywords" content="チュウニズム,チューニズム,CHUNITHM,セガ,maimai,音ゲー">
+
+<title>CHUNITHM ■ CHUNITHM-NET</title>
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+
+<link rel="stylesheet" href="common/css/common.css" />
+<link rel="stylesheet" href="common/css/submenu.css" />
+<link rel="stylesheet" href="common/css/contents.css" />
+<link rel="stylesheet" href="common/css/ios.css" />
+
+<script src="common/js/jquery-1.7.2.min.js"></script>
+<script src="common/js/jquery.marquee.js"></script>
+<script src="common/js/common.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68439863-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</head>
+
+<body>
+<div id="background_for_pad"></div>
+<div id="wrap">
+  <!--▼ヘッダ-->
+  <h1 id="header">
+  </h1>
+  <!--▲ヘッダ-->
+
+  <!--▼メインメニュー-->
+    <div id="main_menu">
+    <ul>
+      <li class="btn_home"        onClick="location.href='./Home.html';"></li>
+      <li class="btn_record_on"     onClick="location.href='./MapInfo.html';"></li>
+      <li class="btn_collection"  onClick="location.href='./Character.html';"></li>
+      <li class="btn_friend"      onClick="location.href='./Friendlist.html';"></li>
+      <li class="btn_ranking"   onClick="JavaScript:document.music_ranking.submit();">
+        <form name="music_ranking" action="MusicRanking.html" method="POST">
+          <input type="hidden" name="menu" value="link">
+        </form>
+      </li>
+      <li class="btn_worldsend"   onClick="location.href='./WorldsEndMusic.html';"></li>
+      <li class="btn_course"      onClick="location.href='./Course.html';"></li>
+      <li class="btn_irodori" onClick="window.open('http://chunithm.sega.jp/irodorimidori/live/','_blank')"></li>
+    </ul>
+  </div>
+
+  <!--▲メインメニュー-->
+
+  <!--▼コンテンツ-->
+  <div id="inner">
+    <div class="frame01 w460">
+      <div class="frame01_inside w450">
+        <div id="submenu">
+          <ul>
+            <li class="submenu_map" onClick="location.href='./MapInfo.html';"><a href="#">マップ</a></li>
+            <li class="submenu_play_on"><a href="#">プレイ履歴</a></li>
+            <li class="submenu_record" onClick="location.href='./MusicGenre.html';"><a href="#">楽曲別レコード</a></li>
+            <li class="submenu_pilgrimage" onClick="location.href='./Region.html';"><a href="#">全国行脚</a></li>
+          </ul>
+        </div>
+
+        <!--●ページタイトル-->
+        <h2 id="page_title">プレイ履歴</h2>
+
+        <hr class="line_dot_black w420" />
+
+        <div class="box01 w420">
+          <div class="mt_10">
+
+            <form onSubmit="return false">
+                <div class="frame02 w400">
+                  <div class="play_datalist_date">2017-09-04 19:42</div>
+                  <div class="play_jacket_side">
+                    <div class="play_jacket_area">
+                      <div class="play_jacket_img"><img src="common/img/73f86aec8d6c7c9b.jpg"></div>
+                    </div>
+                  </div>
+                  <div class="play_data_side">
+                    <div class="box02 play_track_block">
+                      <div class="play_track_text">Track 3</div>
+                      <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                    </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">紅華刑</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：997,033</div>
+                    </div>
+                  </div>
+                <div class="play_musicdata_icon clearfix">
+                  <!-- ◆クリア -->
+                  <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                  <img src="common/images/icon_rank_8.png" />
+                </div>
+              </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',0);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-04 19:38</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/854cf33a2b30f004.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">最愛テトラグラマトン</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,000,318</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',1);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-04 19:35</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/13a5a9ca35a9b71b.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Angel dust</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：974,524</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_7.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',2);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-04 19:31</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/2e95529be9118a11.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Halcyon</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：995,265</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',3);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-04 19:27</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/aabf49add818546d.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Lapis</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,003,737</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',4);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-04 19:23</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/573109ca9050f55d.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">ギガンティックO.T.N</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：999,452</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',5);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-04 19:20</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/bb221e3de960de7d.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">愛迷エレジー</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：994,931</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',6);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-04 19:16</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/59cfd6c8ebfaf904.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">カラフル。</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,007,671</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',7);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-04 19:12</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/b1d75980a300384f.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">太陽曰く燃えよカオス</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,006,508</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',8);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:42</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/6905b5ce0d115340.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">オススメ☆♂♀☆でぃすとぴあ</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：985,773</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',9);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:38</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/e7ee14d9fe63d072.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Vallista</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：985,143</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',10);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:35</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/8b04b9ad2d49850c.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Aragami</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：954,950</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_7.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',11);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:32</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/8ec9a26e11ec1a40.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">カミサマネジマキ</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：999,074</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',12);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:28</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/8b145fe4cf0c01bb.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Imperishable Night 2006 (2016 Refine)</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：965,768</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                                        <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_7.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',13);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:25</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/d483d1ca2a5e10ff.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Phantasm Brigade</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：995,543</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',14);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:21</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/424b4d3540141967.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">夢と夢～あの日のメロディ～</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,009,595</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆オールジャスティス -->
+                    <img src="common/images/icon_alljustice.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',15);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:18</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/a2fdef9e4b278a51.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Schrecklicher Aufstand</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,006,873</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',16);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:14</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/c2c4ece2034eb620.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">The wheel to the right</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,004,775</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',17);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:10</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/eaa5090407bf9aed.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">ＧＯ！ＧＯ！ラブリズム♥ ～あーりん書類審査通過記念Ver.～</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,007,082</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',18);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:06</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/eaa5090407bf9aed.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">ＧＯ！ＧＯ！ラブリズム♥ ～あーりん書類審査通過記念Ver.～</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,008,121</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',19);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 21:02</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/424b4d3540141967.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">夢と夢～あの日のメロディ～</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,007,548</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',20);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:58</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/424b4d3540141967.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">夢と夢～あの日のメロディ～</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,009,113</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆フルコンボ -->
+                    <img src="common/images/icon_fullcombo.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',21);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:55</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/de62556bd83dd21d.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Still</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,009,773</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆オールジャスティス -->
+                    <img src="common/images/icon_alljustice.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',22);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:51</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/282cb1cacd4c1bb4.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Dreadnought</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,009,430</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆フルコンボ -->
+                    <img src="common/images/icon_fullcombo.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',23);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:47</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/13a5a9ca35a9b71b.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Angel dust</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：966,566</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_7.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',24);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:44</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/e9eeb98572b140bc.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Say A Vengeance</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：985,560</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',25);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:40</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/d483d1ca2a5e10ff.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Phantasm Brigade</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,009,445</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆フルコンボ -->
+                    <img src="common/images/icon_fullcombo.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',26);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:35</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/b49a0669bb6e3d99.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">儚きもの人間</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,008,952</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆フルコンボ -->
+                    <img src="common/images/icon_fullcombo.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',27);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:31</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/5744f4cf66710a56.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">君色シグナル</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,005,045</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',28);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:28</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/44c1e56a88c144c3.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">FEEL×ALIVE</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：999,002</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',29);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:24</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/a3473adab177dea7.jpg"></div>
+                                        <div class="play_data_task"><img src="common/images/icon_task.png"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">前前前世</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,007,308</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',30);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:21</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/bf9ed3a6cfbffe15.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">MEMORIA</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,008,072</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆フルコンボ -->
+                    <img src="common/images/icon_fullcombo.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',31);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-09-02 20:17</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/1dee6916940a90cd.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">ようこそジャパリパークへ</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,009,827</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆オールジャスティス -->
+                    <img src="common/images/icon_alljustice.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',32);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 20:11</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/6905b5ce0d115340.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">オススメ☆♂♀☆でぃすとぴあ</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：981,773</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',33);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 20:07</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/282cb1cacd4c1bb4.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Dreadnought</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：981,205</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',34);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 20:04</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/59cfd6c8ebfaf904.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">カラフル。</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,008,153</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',35);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:59</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/d5a47266b4fe0bfe.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">ジングルベル</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：986,303</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',36);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:55</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/aabf49add818546d.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Lapis</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,000,475</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',37);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:53</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/13a5a9ca35a9b71b.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Angel dust</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：972,264</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_7.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',38);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:49</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/23e754d62862c0c4.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">TRUST</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,002,897</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',39);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:45</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/854cf33a2b30f004.jpg"></div>
+                                        <div class="play_data_task"><img src="common/images/icon_task.png"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">最愛テトラグラマトン</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：994,955</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',40);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:41</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/6905b5ce0d115340.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">オススメ☆♂♀☆でぃすとぴあ</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：988,415</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',41);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:37</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/6905b5ce0d115340.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">オススメ☆♂♀☆でぃすとぴあ</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,008,079</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',42);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:33</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/a62f975edc860e34.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Cyberozar</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：994,658</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',43);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:30</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/9f281db3bcc9353b.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">stella=steLLa</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：997,098</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',44);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:26</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/ec37e447b91995dd.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">猛進ソリストライフ！</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,004,641</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_9.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',45);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:22</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/b895c09337da04cf.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Dreams Dreams:Kids Ver.</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,009,016</div>
+                                            <div class="play_musicdata_score_img"><img src="common/images/icon_newrecord.jpg"></div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆フルコンボ -->
+                    <img src="common/images/icon_fullcombo.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',46);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:19</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/08a24ed249ed2eec.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 1</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_expert.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">HAELEQUIN (Original Remaster)</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：997,213</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',47);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:14</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/f5f99bf548dab947.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 3</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Starlight Dance Floor</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：1,009,273</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_10.png" />
+                                        <!-- ◆フルコンボ -->
+                    <img src="common/images/icon_fullcombo.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',48);">詳細を見る</a><br></div>
+              </div>
+                            <div class="frame02 w400">
+                <div class="play_datalist_date">2017-07-23 19:11</div>
+                <div class="play_jacket_side">
+                  <div class="play_jacket_area">
+                    <div class="play_jacket_img"><img src="common/img/35f4cdddf050d04c.jpg"></div>
+                                      </div>
+                </div>
+                <div class="play_data_side">
+                  <div class="box02 play_track_block">
+                    <div class="play_track_text">Track 2</div>
+                    <div class="play_track_result"><img src="common/images/icon_text_master.png"></div>
+                  </div>
+                  <div class="box02 play_musicdata_block">
+                    <div class="play_musicdata_title">Help me, ERINNNNNN!! -Cranky remix-</div>
+                    <div class="play_musicdata_score clearfix">
+                      <div class="play_musicdata_score_text">Score：991,200</div>
+                                          </div>
+                  </div>
+                  <div class="play_musicdata_icon clearfix">
+                    <!-- ◆クリア -->
+                    <img src="common/images/icon_clear.png" />                    <!-- ◆ランク -->
+                    <img src="common/images/icon_rank_8.png" />
+                                                          </div>
+                </div>
+                <div class="btn_see_detail"><a href="JavaScript:void(0);" onclick="JavaScript:pageMove('PlaylogDetail',49);">詳細を見る</a><br></div>
+              </div>
+              
+            </form>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!--▲コンテンツ-->
+
+  <div id="setting" onClick="location.href='./Config.html';"></div>
+</div>
+
+<!--▼フッタ-->
+<div id="footer">
+<!-- footer内容を読み込み -->
+  <div class="footer_banner clearfix">
+    <a href="http://maimai.sega.jp/" target="_blank"><img src="common/images/banner_maimai_official.jpg" /></a><br>
+    <a href="http://chunithm.sega.jp/" target="_blank"><img src="common/images/banner_chunithm_official.jpg" /></a><br>
+    <a href="https://my-aime.net/" target="_blank"><img src="common/images/banner_aime_l.jpg" /></a><br>
+  </div>
+  <div class="footer_menu">
+    <ul>
+      <li>｜<a href="./Agreement.html">利用規約</a>｜</li>
+      <li>｜<a href="./Right.html">利用権について</a>｜</li>
+      <li>｜<a href="./Environment.html">推奨環境</a>｜</li>
+      <li>｜<a href="./Contact.html">ご意見/お問い合わせ</a>｜</li>
+    </ul>
+  </div>
+  <div class="footer_attention">
+      <div id="footer_copy">
+        <a href="https://sega.jp/" target="_blank">
+          <img src="common/images/logo_sega.png" /><br>
+        </a>
+        &copy; SEGA
+      </div>
+      </div>
+</div>
+<!--▲フッタ-->
+</body>
+</html>
+

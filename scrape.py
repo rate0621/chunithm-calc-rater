@@ -41,7 +41,7 @@ with urllib.request.urlopen("https://chuniviewer.net/api/GetMusicConstantValues.
 	html = res.read().decode("utf-8")
 	ratelist_json = json.loads(html)
 
-html_file = ("/Users/uu071978/rate/rate/uni-scrape/html/chunithm.html")
+html_file = ("/Users/ebinareito/rate/uni-tools/html/chunithm.html")
 html = codecs.open(html_file, 'r', 'utf-8')
 soup = BeautifulSoup(html, "html.parser")
 article = soup.find_all(class_="w388 musiclist_box bg_master")

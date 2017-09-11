@@ -2,14 +2,8 @@ import urllib.request
 import json
 import pandas as pd
 
-
-df = pd.DataFrame(
-	columns = ['name', 'rate']
-)
+def __init__():
+  print ("init")
 
 
-
-
-
-
-df.to_csv("aaa.csv", index=False)
+__init__()
