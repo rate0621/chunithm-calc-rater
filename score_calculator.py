@@ -51,22 +51,44 @@ class ScoreCalculator:
     return baserate_list
 
 
-  def calc_rate(self, baserate_list, my_score):
-    for key in my_score:
-      my_score[key]["rate"] = 0
-      if my_score[key]["score"] == 0:
-        print (my_score[key]["music_name"] + " is not play...")
+  def calc_rate(self, baserate_list, score, playlog):
+    """
+    scoreにrateを追加する
+    """
+
+    #まずbest枠のrateを算出する
+    for key in score:
+      score[key]["rate"] = 0
+      if score[key]["score"] == 0:
+        print (score[key]["music_name"] + " is not play...")
       else:
         if baserate_list[key]["value"] == None:
-          print ("Sorry, " + my_score[key]["music_name"] + " baserate is None.")
+          print ("Sorry, " + score[key]["music_name"] + " baserate is None.")
         else:
-          rate = self.score_to_rate(int(my_score[key]["score"].replace(',', '')), baserate_list[key]["value"])
-          my_score[key]["rate"] = rate
-
-    return my_score
+          rate = self.score_to_rate(int(score[key]["score"].replace(',', '')), baserate_list[key]["value"])
+          score[key]["rate"] = rate
 
 
-  def calc_rate(self, score, playlog):
+    # 次のrecent枠のrateを算出
+    # playlogだが、playlogのページからはmusic_idが引けなかったため、
+    # score["music_name"]とplaylog["music_name"]とを紐付けて、そこから、score["music_id"]を引っ張り出して、
+    # baserate_listの譜面定数を導き出し、最終的にrateを算出する。
+    # TODO：とわいえ苦肉の策なので、いずれは楽曲のjpgファイルを使って紐付ける仕様にしたい
+    for num, playlog_value in enumerate(playlog):
+      playlog[num]["rate"] = 0
+      for key, score_value in score.items():
+        if playlog_value["music_name"] == score_value["music_name"]:
+          if baserate_list[key]["value"] == None:
+            print ("Sorry, " + score[key]["music_name"] + " baserate is None.")
+          else:
+            rate = self.score_to_rate(int(playlog_value["score"].replace(',', '')), baserate_list[key]["value"])
+            playlog[num]["rate"] = rate
+            break
+
+    return score, playlog
+
+
+  def calc_finally_rate(self, score, playlog):
     """
     与えられた変数score, playlogから算出した平均値を返す
     score -> best枠として上位20位の楽曲
@@ -75,13 +97,25 @@ class ScoreCalculator:
     best、recentの30曲のrateの平均値がrateとなる。
     """
 
-    best_music_limit = 20
+    best_music_limit = 30
     rate_array = []
-    for i, key in enumerate(sorted(my_rate, key=lambda x:my_rate[x]["rate"], reverse=True)):
-      rate_array.append(my_rate[key]["rate"])
+    for i, key in enumerate(sorted(score, key=lambda x:score[x]["rate"], reverse=True)):
+      rate_array.append(score[key]["rate"])
       if i == best_music_limit - 1:
         break
 
+    print (len(rate_array))
+    print (sum(rate_array))
+    print (sum(rate_array)/len(rate_array))
+
+    recent_music_limit = 10
+    for i, playlog_value in enumerate(sorted(playlog, key=lambda x:x["rate"], reverse=True)):
+      rate_array.append(playlog[i]["rate"])
+      if i == recent_music_limit - 1:
+        break
+
+    print (len(rate_array))
+    print (sum(rate_array))
     average = sum(rate_array)/len(rate_array)
 
     return math.floor(average * 100) / 100
@@ -93,8 +127,10 @@ if __name__ == '__main__':
 
   args = sys.argv
   cn = ChunithmNet.ChunithmNet(args[1], args[2])
+
+  # TODO:scoreとplaylogはselfで持たせたほうがいい気がする
   score, playlog = cn.get_score_and_playlog()
-  rate = sc.calc_rate(baserate_list, score, playlog)
-  print (sc.calc_my_bests(my_rate))
+  score, playlog = sc.calc_rate(baserate_list, score, playlog)
+  print (sc.calc_finally_rate(score, playlog))
 
 
