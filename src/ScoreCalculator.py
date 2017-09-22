@@ -118,18 +118,20 @@ class ScoreCalculator:
     
   def get_best_music_list(self):
     score = self.cn.get_score_only()
-    print (score)
+
+    return score
     
 if __name__ == '__main__':
-  sc = ScoreCalculator()
-  baserate_list = sc.create_baserate_list()
-
   args = sys.argv
-  cn = ChunithmNet.ChunithmNet(args[1], args[2])
+  sc = ScoreCalculator(args[1], args[2])
+  baserate_list = sc.create_baserate_list()
+  print (sc.get_best_music_list())
+
+  #cn = ChunithmNet.ChunithmNet(args[1], args[2])
 
   # TODO:scoreとplaylogはselfで持たせたほうがいい気がする
-  score = cn.get_score_only()
-  score = sc.calc_rate(baserate_list, score)
-  print (sc.calc_finally_rate(score))
+  #score = cn.get_score_only()
+  #score = sc.calc_rate(baserate_list, score)
+  #print (sc.calc_finally_rate(score))
 
 
