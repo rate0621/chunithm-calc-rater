@@ -1,5 +1,5 @@
 from bottle import route, run, template, response, redirect, request, static_file, url
-import src.lib.Passworder as Passworder
+import uni-common-tools.lib.Passworder as Passworder
 
 @route('/static/:path#.+#', name='static')
 def static(path):
