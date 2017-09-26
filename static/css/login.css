@@ -26,6 +26,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.list,
 .login {
   width: 400px;
   margin: 16px auto;
@@ -107,4 +108,8 @@ body {
 /* Buttons' focus effect */
 .login input[type="submit"]:focus {
   border-color: #05a;
+}
+
+tr:nth-child(odd) {
+  background: #DDF1F4;
 }

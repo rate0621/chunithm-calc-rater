@@ -23,7 +23,8 @@ def index():
 
 @route('/login')
 def login():
-  return template("login")
+  test = "hooreeey"
+  return template("login", test=test)
 
 @route('/login', method="POST")
 def login():
@@ -44,6 +45,15 @@ def login():
   else:
     return {'message':'ID か Password が間違っています。'}
   
+
+@route('/list')
+def list():
+  my_records = {
+    "100_3": {"music_id": 100, "music_name": "hoge", "difficulty_id": "3", "score": 1000 },
+    "200_3": {"music_id": 200, "music_name": "bell", "difficulty_id": "3", "score": 1001000 }
+  }
+  return template("list", record_list=my_records)
+
 
 @route('/top')
 def top():
@@ -74,6 +84,9 @@ def hoge():
   #return request.environ.get('beaker.session')
 
 app = app()
+
 app = SessionMiddleware(app, session_opts)
-run(app=app, reloader=True, port=9999)
+run(app=app, reloader=True, interval=0.5, port=9999)
 #run(reloader=True, port=9999)
+
+
