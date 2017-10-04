@@ -1,10 +1,12 @@
-from bottle import route, run, template, response, redirect, request, static_file, url, app
+from bottle import route, run, response, redirect, request, static_file, url, app
+from bottle import jinja2_template as template
 from beaker.middleware import SessionMiddleware
 
 import session_util as util
 
 #import bottle_session
 import uni_common_tools.lib.Passworder as Passworder
+import uni_common_tools.ScoreCalculator as ScoreCalculator
 
 session_opts = {
     'session.type': 'file',
@@ -23,8 +25,8 @@ def index():
 
 @route('/login')
 def login():
-  test = "hooreeey"
-  return template("login", test=test)
+  message = util.session_get('message')
+  return template("login", message=message)
 
 @route('/login', method="POST")
 def login():
@@ -46,47 +48,50 @@ def login():
     return {'message':'ID か Password が間違っています。'}
   
 
+@route('/top')
+def top():
+
+  '''TOP page'''
+  role = util.session_get('role')
+  #if role is not None:
+  if not role == "":
+    return template("top", message=util.session_get('message', True))
+  else:
+    util.session_set('message', 'ログインが必要です')
+    return redirect('/login')
+
 @route('/list')
 def list():
   my_records = {
     "100_3": {"music_id": 100, "music_name": "hoge", "difficulty_id": "3", "score": 1000 },
     "200_3": {"music_id": 200, "music_name": "bell", "difficulty_id": "3", "score": 1001000 }
   }
+
+  #sc = ScoreCalculator.ScoreCalculator("", "")
+  #music_list = sc.get_best_music_list()
+  #return template("list", record_list=my_records, music_list=music_list)
   return template("list", record_list=my_records)
 
 
-@route('/top')
-def top():
-  '''TOP page'''
-  role = util.session_get('role')
-  if role is not None:
-    return {'message': util.session_get('message', True),
-            'role': role}
-  else:
-    util.session_set('message', 'ログインが必要です')
-    return redirect('/login')
-
-@route('/hoge')
-def hoge():
-  #s = request.environ.get('beaker.session')
-  #s['test'] = s.get('test',0) + 1
-  #s.save()
-  test = util.session_set('test', "this is session")
-  test = util.session_get('test', delete=True)
-  print ("1")
-  print (test)
-  test = util.session_get('test', delete=True)
-  print ("2")
-  print (test)
-  test = util.session_get('test', delete=True)
-  return 'Test counter: '
-  #return 'Test counter: %d' % s['test']
-  #return request.environ.get('beaker.session')
+#@route('/hoge')
+#def hoge():
+#  #s = request.environ.get('beaker.session')
+#  #s['test'] = s.get('test',0) + 1
+#  #s.save()
+#  test = util.session_set('test', "this is session")
+#  test = util.session_get('test', delete=True)
+#  print ("1")
+#  print (test)
+#  test = util.session_get('test', delete=True)
+#  print ("2")
+#  print (test)
+#  test = util.session_get('test', delete=True)
+#  return 'Test counter: '
+#  #return 'Test counter: %d' % s['test']
+#  #return request.environ.get('beaker.session')
 
 app = app()
-
 app = SessionMiddleware(app, session_opts)
 run(app=app, reloader=True, interval=0.5, port=9999)
 #run(reloader=True, port=9999)
-
 

@@ -7,7 +7,7 @@
   <h2 class="login-header">Log in</h2>
 
   <form id="loginForm" class="login-container" method="post" onsubmit="return Login.doLogin(this)">
-    <p>{{ test }}</p>
+    <p>{{ message }}</p>
     <p><input type="text" name="id" placeholder="id"></p>
     <p><input type="password" name="password" placeholder="Password"></p>
     <p><input type="submit" value="Log in"></p>
