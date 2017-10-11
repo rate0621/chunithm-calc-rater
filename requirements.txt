@@ -1,6 +1,9 @@
+Beaker==1.9.0
 beautifulsoup4==4.6.0
 bottle==0.12.13
 bs4==0.0.1
+Jinja2==2.9.6
+MarkupSafe==1.0
 numpy==1.13.1
 pandas==0.20.3
 pycrypto==2.6.1
